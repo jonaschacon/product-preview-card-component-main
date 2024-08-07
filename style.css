@@ -43,6 +43,7 @@ body {
 }
 
 main {
+    overflow: hidden;
     background-color: white;
     max-width: 350px;
     border-radius: 15px;
@@ -60,6 +61,10 @@ div.price {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+#desktop {
+    display: none;
 }
 
 img {
@@ -109,8 +114,45 @@ button {
     font-weight: 800;
     padding: 15px;
     margin: auto;
+    cursor: pointer;
+    transition: background-color 400ms;
 }
 
+button:hover {
+    background-color: hsl(158, 36%, 27%);
+}
 * {
     padding: 0px;
+}
+
+
+
+@media screen and (min-width: 650px) {
+
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: block;
+        border-radius: 0px;
+    }
+    
+    main {
+        display: flex;
+        max-width: 600px;
+    }
+
+    .image {
+        flex-basis: 50%;
+    }
+
+    .information {
+        flex-basis: 50%;
+    }
+
+    header {
+        position: absolute;
+        bottom: 10px;
+    }
 }
